@@ -1,4 +1,12 @@
 package planner.factory_method;
 
-public class PlannerPageCreator {
+public abstract class PlannerPageCreator {
+
+    public abstract PageLayout createPage();
+
+
+    public void displayPage() {
+        PageLayout page = createPage();
+        page.render();
+    }
 }
